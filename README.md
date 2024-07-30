@@ -2,7 +2,7 @@
 <p align="center">
   <br>
 	<a href="https://github.com/knfs-library/bamimi-cli/actions" alt="github">
-	<img src="https://github.com/knfs-library/bamimi-cli/actions/workflows/unit-test.yml/badge.svg" alt="Github Actions" />
+	<img src="https://github.com/knfs-library/bamimi-cli/actions/workflows/test.yml/badge.svg" alt="Github Actions" />
 	</a>
 </p>
 
