@@ -1,0 +1,11 @@
+"use strict";
+
+const { sendMail } = require("../../utils/mail");
+// render
+// queue
+
+module.exports = (data) => {
+    // content
+
+    // more
+};

@@ -1,0 +1,11 @@
+"use strict";
+
+// import
+
+module.exports = {
+    name: "// jobName",
+    queue: "// queueName",
+    handle: async function (job) {
+		// handle
+    }
+};

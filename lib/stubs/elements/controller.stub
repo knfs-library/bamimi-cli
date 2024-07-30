@@ -1,0 +1,8 @@
+"use strict";
+
+module.exports = {
+    index: async function (req, res) {
+        return await res.send("Hello World")
+    },
+	// more
+};
