@@ -36,6 +36,7 @@
     "@knfs-tech/bamimi-auth": "^1.1.1",
     "@knfs-tech/bamimi-autoload": "^1.0.6",
     "@knfs-tech/bamimi-socket.io": "^1.0.5",
+    "@knfs-tech/bamimi-log": "^1.0.1",
     "@knfs-tech/csrf": "^1.0.3",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
@@ -65,7 +66,6 @@
     "files": {
       "./src/utils/asset.js": "asset",
       "./src/utils/url.js": "url",
-      "./src/libs/log.lib.js": "logger",
       "./src/utils/file.js": "file",
       "./src/utils/csrf.js": "csrf",
       "./src/utils/date.js": "date"
