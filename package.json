@@ -1,6 +1,6 @@
 {
   "name": "@knfs-tech/bamimi-cli",
-  "version": "0.1.2-beta",
+  "version": "0.1.3-beta",
   "description": "Command line of Bamimi framework",
   "bin": {
     "bamimi-cli": "./lib/cli.js"
