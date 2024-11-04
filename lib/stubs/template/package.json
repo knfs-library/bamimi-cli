@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "Super framework for nodejs",
   "main": "server.js",
+  "bin": {
+    "bamimi-schedule-cli": "./src/routes/cli/index.js"
+  },
   "scripts": {
     "start": "node ./src/server.js",
     "start-dev": "nodemon ./src/server.js",
-    "schedule": "node ./src/schedule.js",
     "socket": "node ./src/socket.js",
     "socket-dev": "nodemon ./src/socket.js",
     "migration:create": "npx sequelize-cli migration:generate",
@@ -35,8 +37,9 @@
   "dependencies": {
     "@knfs-tech/bamimi-auth": "^1.1.1",
     "@knfs-tech/bamimi-autoload": "^1.0.6",
-    "@knfs-tech/bamimi-socket.io": "^1.0.5",
     "@knfs-tech/bamimi-log": "^1.0.1",
+    "@knfs-tech/bamimi-schedule": "^1.0.1",
+    "@knfs-tech/bamimi-socket.io": "^1.0.5",
     "@knfs-tech/csrf": "^1.0.3",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
