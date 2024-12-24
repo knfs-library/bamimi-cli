@@ -1,5 +1,5 @@
 # Stage 1: Builder
-FROM node:20-slim AS builder
+FROM node:20 AS builder
 
 RUN apt-get update && apt-get install -y \
 	build-essential \
@@ -32,5 +32,4 @@ RUN yarn install --production=false --ignore-scripts
 
 EXPOSE 3000
 
-ENTRYPOINT [ "entrypoint.sh" ]
 CMD ["yarn", "start"]

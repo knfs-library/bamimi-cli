@@ -1,5 +1,9 @@
 "use strict";
 
 module.exports = async (req, res, next) => {
-	// more
+	try {
+		// more
+    } catch(error) {
+        next(error)
+    }
 };

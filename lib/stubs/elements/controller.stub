@@ -1,8 +1,13 @@
 "use strict";
 
 module.exports = {
-    index: async function (req, res) {
-        return await res.send("Hello World")
+    index: async function (req, res, next) {
+        try {
+            return await res.send("Hello World")
+        } catch(error) {
+            next(error)
+        }
+        
     },
 	// more
 };
