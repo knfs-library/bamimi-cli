@@ -1,0 +1,26 @@
+{
+	"presets": [
+		"@babel/preset-env"
+	],
+	"plugins": [
+		[
+			"module-resolver",
+			{
+				"root": [
+					"./src"
+				],
+				"alias": {
+					"@iApp": "./src/app",
+					"@iKernel": "./src/kernel",
+					"@iConfigs": "./src/configs",
+					"@iLibs": "./src/libs",
+					"@iNotifications": "./src/notifications",
+					"@iRoutes": "./src/routes",
+					"@iModules": "./src/modules",
+					"@iUtils": "./src/utils",
+					"@iInterfaces": "./src/interfaces"
+				}
+			}
+		]
+	]
+}

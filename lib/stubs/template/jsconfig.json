@@ -1,0 +1,46 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "commonjs",
+		"strict": true,
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"paths": {
+			"@iApp/*": [
+				"src/app/*"
+			],
+			"@iConfigs/*": [
+				"src/configs/*"
+			],
+			"@iKernel/*": [
+				"src/kernel/*"
+			],
+			"@iLibs/*": [
+				"src/libs/*"
+			],
+			"@iUtils/*": [
+				"src/utils/*"
+			],
+			"@iNotifications/*": [
+				"src/notifications/*"
+			],
+			"@iRoutes/*": [
+				"src/routes/*"
+			],
+			"@iModules/*": [
+				"src/modules/*"
+			],
+			"@iInterfaces/*": [
+				"src/interfaces/*"
+			],
+		}
+	},
+	"include": [
+		"src/**/*"],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+	
+}

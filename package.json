@@ -5,6 +5,9 @@
   "bin": {
     "bamimi-cli": "./lib/cli.js"
   },
+  "engines": {
+    "node": ">=18.0.0 <=23.0.0"
+  },
   "scripts": {
     "test": "jest --runInBand --force-exit --detectOpenHandles"
   },

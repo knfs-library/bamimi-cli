@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require("sequelize");
-const sequelize = require("../../kernel/database");
-const auth = require("../../kernel/auth");
+const sequelize = require("@iKernel/database")();
+const auth = require("@iKernel/auth");
 
 const User = sequelize.define("users", {
     id: {

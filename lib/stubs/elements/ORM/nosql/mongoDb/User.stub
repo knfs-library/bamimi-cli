@@ -1,0 +1,38 @@
+const mongoose = require("@iKernel/database")();
+const Schema = mongoose.Schema;
+const auth = require("@iKernel/auth");
+
+const userSchema = new Schema({
+    state: {
+        type: Number,
+        required: true
+    },
+    email: {
+        type: String,
+        unique: true,
+        required: true,
+        sparse: true,
+    },
+    username: {
+        type: String,
+        unique: true,
+        required: true,
+        sparse: true,
+    },
+    password: {
+        type: String,
+        required: true
+    },
+}, {
+    timestamps: true,
+});
+
+userSchema.pre('save', async function (next) {
+    if (!this.isModified('password')) return next();
+    this.password = await auth.hashPassword(this.password, 10)
+    next();
+});
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;

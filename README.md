@@ -94,6 +94,12 @@ bamimi-cli job:generate <jobName>
 
 - `jobName`: The name of the job you want to create.
 
+### Build Project
+
+```bash
+bamimi-cli build 
+```
+  
 ## License
 
 Bamimi CLI is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).

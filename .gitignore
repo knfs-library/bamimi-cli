@@ -132,3 +132,4 @@ yarn.lock
 .pnp.*
 
 .src/storage/sys/logs/
+.env
