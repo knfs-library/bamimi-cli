@@ -1,6 +1,6 @@
 {
   "name": "bamimi",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Power framework for nodejs",
   "main": "server.js",
   "bin": {
@@ -10,7 +10,7 @@
     "node": ">=18.0.0 <=23.0.0"
   },
   "scripts": {
-    "build": "npx bamimi-cli build",
+    "build": "npx @knfs-tech/bamimi-cli@latest build",
     "start": "node ./dist/server.js",
     "dev": "nodemon ./src/server.js",
     "socket": "node ./dist/socket.js",
@@ -50,7 +50,6 @@
     "@iInterfaces": "./src/interfaces"
   },
   "dependencies": {
-    "@knfs-tech/bamimi-autoload": "^1.0.7",
     "@knfs-tech/bamimi-log": "^1.0.1",
     "@knfs-tech/bamimi-schedule": "^1.1.1",
     "@knfs-tech/bamimi-socket.io": "^1.0.7",
