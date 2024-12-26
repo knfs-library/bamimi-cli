@@ -1,6 +1,6 @@
 {
   "name": "bamimi",
-  "version": "0.3.3",
+  "version": "0.5.1",
   "description": "Power framework for nodejs",
   "main": "src/server.js",
   "bin": {
@@ -29,10 +29,6 @@
     "lint": "npx eslint . ",
     "lint:fix": "npx eslint . --fix",
     "test": "jest --runInBand --force-exit --detectOpenHandles"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:knfs-jsc/bamimi.git"
   },
   "author": "Kent Phung",
   "keywords": [
@@ -99,6 +95,7 @@
     "jest": "^29.4.3",
     "nodemon": "^3.1.4",
     "ncp": "^2.0.0",
+    "open": "^10.1.0",
     "sequelize-cli": "^6.6.2",
     "supertest": "^6.3.3",
     "typescript": "^5.5.4",

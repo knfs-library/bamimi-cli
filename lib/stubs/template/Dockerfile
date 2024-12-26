@@ -19,14 +19,9 @@ COPY --chown=node:node . .
 
 RUN yarn build
 
-# Install production-only dependencies and clean up
-RUN rm -rf /usr/src/app/node_modules && yarn install --production
-
 
 # Stage 2: Development
-FROM node:20-slim as dev
-
-ENV NODE_ENV=development
+FROM node:20-slim as development
 
 # Copy only the dist directory from the builder stage
 COPY --from=builder /usr/src/app/dist /usr/src/app/dist
@@ -35,9 +30,29 @@ COPY --from=builder /usr/src/app/package.json /usr/src/app/package.json
 COPY --from=builder /usr/src/app/node_modules /usr/src/app/node_modules
 COPY --from=builder /usr/src/app/.env /usr/src/app/.env
 
+ENV NODE_ENV=development
 WORKDIR /usr/src/app
 
 RUN yarn install --production=false --ignore-scripts
+
+EXPOSE 3000
+
+CMD ["yarn", "start"]
+
+
+# Stage 3: Production
+FROM node:20-slim as production
+
+# Copy only the dist directory from the builder stage
+COPY --from=builder /usr/src/app/dist /usr/src/app/dist
+
+COPY --from=builder /usr/src/app/package.json /usr/src/app/package.json
+COPY --from=builder /usr/src/app/.env /usr/src/app/.env
+
+ENV NODE_ENV=production
+WORKDIR /usr/src/app
+
+RUN yarn install --production
 
 EXPOSE 3000
 
