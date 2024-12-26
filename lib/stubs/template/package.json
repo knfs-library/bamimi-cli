@@ -1,15 +1,17 @@
 {
   "name": "bamimi",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Power framework for nodejs",
   "main": "src/server.js",
   "bin": {
-    "bamimi-oven": "./src/routes/cli/index.js"
+    "bamimi-oven": "./dist/routes/cli/index.js",
+    "bamimi-oven--dev": "./src/routes/cli/index.js"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
+    "setup": "npm link .",
     "build": "npx @knfs-tech/bamimi-cli@latest build",
     "start": "node ./dist/server.js",
     "dev": "nodemon ./src/server.js",
