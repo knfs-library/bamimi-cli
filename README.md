@@ -93,6 +93,20 @@ bamimi-cli job:generate <jobName>
 ```
 
 - `jobName`: The name of the job you want to create.
+  
+### Generate Interface
+
+```bash
+bamimi-cli itf:generate <interfaceName>
+```
+- `interfaceName`: The name of the interface you want to create.
+  
+### Generate Docker
+
+```bash
+bamimi-cli docker:generate
+```
+
 
 ### Build Project
 
