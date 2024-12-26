@@ -1,8 +1,8 @@
 {
   "name": "bamimi",
-  "version": "0.2.2",
+  "version": "0.3.1",
   "description": "Power framework for nodejs",
-  "main": "server.js",
+  "main": "src/server.js",
   "bin": {
     "bamimi-schedule-cli": "./src/routes/cli/index.js"
   },
@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@knfs-tech/bamimi-log": "^1.0.1",
-    "@knfs-tech/bamimi-schedule": "^1.1.1",
+    "@knfs-tech/bamimi-schedule": "^1.2.0",
     "@knfs-tech/bamimi-socket.io": "^1.0.7",
     "@knfs-tech/csrf": "^1.0.3",
     "bcrypt": "^5.1.0",

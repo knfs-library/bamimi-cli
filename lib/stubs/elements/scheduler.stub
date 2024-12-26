@@ -1,0 +1,26 @@
+"use strict";
+
+// import
+
+/**
+ * Learn more at:
+ * @link https://www.npmjs.com/package/@knfs-tech/bamimi-schedule
+ */
+module.exports = {
+    name: "// jobName",
+    queue: "// queueName",
+    schedules: [
+      {
+        name: "", //type scheduleName
+        time: {
+          pattern: "0 0 * * *" //type pattern (ex: 0 0 * * *)
+        }, 
+        prepare: { 
+          data: null //type data of to run schedule
+        },
+      },
+    ],
+    handle: async function (job) {
+		// handle
+    }
+};

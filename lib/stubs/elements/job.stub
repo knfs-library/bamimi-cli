@@ -2,6 +2,10 @@
 
 // import
 
+/**
+ * Learn more at:
+ * @link https://www.npmjs.com/package/@knfs-tech/bamimi-schedule
+ */
 module.exports = {
     name: "// jobName",
     queue: "// queueName",
