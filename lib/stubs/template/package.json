@@ -1,11 +1,11 @@
 {
   "name": "bamimi",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Power framework for nodejs",
   "main": "src/server.js",
   "bin": {
-    "bamimi-oven": "./dist/routes/cli/index.js",
-    "bamimi-oven--dev": "./src/routes/cli/index.js"
+    "bamimi-enjoy-": "./dist/routes/cli/index.js",
+    "bamimi-enjoy-dev": "./src/routes/cli/index.js"
   },
   "engines": {
     "node": ">=18.0.0"

@@ -40,7 +40,7 @@ EXPOSE 3000
 CMD ["yarn", "start"]
 
 
-# Stage 3: Production
+# Stage 3: 
 FROM node:20-slim as production
 
 # Copy only the dist directory from the builder stage
