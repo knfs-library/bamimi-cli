@@ -31,7 +31,7 @@ You can use this CLI tool with the following commands:
 ### Create Project
 
 ```bash
-bamimi-cli create <projectName> [options]
+bamimi-cli app:generate <projectName> [options]
 ```
 
 - `projectName`: The name of the project you want to create.

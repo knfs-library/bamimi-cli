@@ -1,9 +1,9 @@
 {
   "name": "@knfs-tech/bamimi-cli",
-  "version": "0.5.3",
+  "version": "0.5.5",
   "description": "Command line of Bamimi framework",
   "bin": {
-    "bamimi-cli": "./lib/cli.js"
+    "bamimi-cli": "./bin/cli.js"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -12,6 +12,7 @@
     "test": "jest --runInBand --force-exit --detectOpenHandles"
   },
   "files": [
+    "bin",
     "lib"
   ],
   "repository": {
@@ -48,7 +49,7 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^7.0.1",
-    "adm-zip": "^0.5.14",
+    "adm-zip": "^0.5.16",
     "axios": "^1.7.2",
     "commander": "^12.1.0",
     "cross-spawn": "^7.0.3",
