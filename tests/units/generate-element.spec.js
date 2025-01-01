@@ -1,5 +1,5 @@
 const fs = require('fs-extra');
-const elementGenerator = require('../../lib/commands/generateElements');
+const elementGenerator = require('../../lib/handlers/generateElements');
 
 jest.mock('fs-extra');
 

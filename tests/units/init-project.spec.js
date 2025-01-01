@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
-const { createDirectoryStructure } = require('../../lib/commands/initProject');
+const { createDirectoryStructure } = require('../../lib/handlers/initProject');
 
 describe('createDirectoryStructure', () => {
 	const projectPath = path.join(__dirname, 'test-project');
