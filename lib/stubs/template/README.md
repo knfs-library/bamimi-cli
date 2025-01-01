@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="250"src="https://libs.knfs-tech.com/bamimi/img/bamimi-logo.png">
+  <img width="250"src="https://bamimi.github.io/assets/img/bamimi-logo.png">
   <br>
 </p>
 
@@ -15,7 +15,7 @@ Bamimi is a web application framework with expressive, elegant syntax. We believ
 
 ## Learning Bamimi
 
-Bamimi has the most extensive and thorough [documentation](https://libs.knfs-tech.com/bamimi) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Bamimi has the most extensive and thorough [documentation](https://bamimi.github.io) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
 ## Contributing
 
