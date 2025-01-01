@@ -37,6 +37,17 @@ bamimi-cli app:generate <projectName> [options]
 - `projectName`: The name of the project you want to create.
 - `-d, --description <description>`: The description of the project.
 - `-v, --version <version>`: The version of the project.
+- `-dk, --docker <docker>`: Use Docker (y/n).
+- `-esl, --eslint <eslint>`: Use Eslint (y/n).
+- `-t, --test <test>`: Use Test (y/n).
+- `-dbt, --databaseType <databaseType`: Database type(SQL, NoSQL, none).
+- `-dbc, --databaseConnection <databaseConnection>`: 'Database connection (postgres, mysql, mariadb, sqlite, mssql, snowflake, oracle, mongodb).
+- `-dbh, --databaseHost <databaseHost>`: Database host.
+- `-dbp, --databasePort <databasePort>`: Database port.
+- `-dbn, --databaseName <databaseName>`: 'Database name.
+- `-dbu, --databaseUser <databaseUser>`: Database username.
+- `-dbps, --databasePassword <databasePassword>`: Database password.
+- `-pkm, --packageManager <packageManager>`: Package manager (npm, yarn, pnpm, none).
 
 ### Generate Controller
 
@@ -89,10 +100,11 @@ bamimi-cli email:generate <emailName> [options]
 ### Generate Job
 
 ```bash
-bamimi-cli job:generate <jobName>
+bamimi-cli job:generate <jobName> [options]
 ```
 
 - `jobName`: The name of the job you want to create.
+- `-isc, --isSchedule <isSchedule>`: Job is schedule (y/n).
   
 ### Generate Interface
 
