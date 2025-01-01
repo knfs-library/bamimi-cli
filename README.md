@@ -48,7 +48,7 @@ bamimi-cli controller:generate <controllerName> [options]
 - `-p, --path <path>`: Path for the controller (if you don’t want to use the default path).
 - `-f, --func <functions...>`: List of functions to create (comma-separated).
 - `-t, --type <type>`: Type of controller (api or web).
-
+****
 ### Generate Middleware
 
 ```bash
@@ -106,7 +106,29 @@ bamimi-cli itf:generate <interfaceName>
 ```bash
 bamimi-cli docker:generate
 ```
+### Generate Eslint
 
+```bash
+bamimi-cli lint:generate
+```
+
+### Generate TestConfig
+
+```bash
+bamimi-cli testConfig:generate
+```
+
+### Generate SQL config, structure, install dependency
+
+```bash
+bamimi-cli sql:generate
+```
+
+### Get version
+
+```bash
+bamimi-cli version:list-remote
+```
 
 ### Build Project
 
