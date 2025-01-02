@@ -1,9 +1,9 @@
 {
   "name": "bamimi",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "Power framework for nodejs",
   "main": "src/server.js",
-  "bamimiVersion": "0.6.9",
+  "bamimiVersion": "0.6.10",
   "bin": {
     "bamimi-enjoy-": "./dist/routes/cli/index.js",
     "bamimi-enjoy-dev": "./src/routes/cli/index.js"
@@ -57,6 +57,7 @@
     "body-parser": "^1.20.2",
     "bullmq": "^5.8.4",
     "cookie-parser": "^1.4.6",
+    "commander": "^13.0.0",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.9",
