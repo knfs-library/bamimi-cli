@@ -3,7 +3,8 @@
 module.exports = {
     index: async function (req, res, next) {
         try {
-            return await res.send("Hello World")
+            await res.send("Hello World")
+            next();
         } catch(error) {
             next(error)
         }
