@@ -35,7 +35,7 @@ describe('Element Generator', () => {
 	module.exports = {
 	    index: async function (req, res, next) {
 			try {
-	        	await res.status(200).sendMessage({ msg: 'ok' });
+	        	await res.status(200).sendData({ msg: 'ok' });
 			} catch(error) {
 				next(error)
 			}
@@ -44,7 +44,7 @@ describe('Element Generator', () => {
 	    testFunc1: async function (req, res, next) {
 			try {
 				// testFunc1 implementation
-				await res.status(200).sendMessage({ msg: 'ok' });
+				await res.status(200).sendData({ msg: 'ok' });
 			} catch(error) {
 				next(error)
 			}
@@ -53,7 +53,7 @@ describe('Element Generator', () => {
 	    testFunc2: async function (req, res, next) {
 			try {
 				// testFunc2 implementation
-				await res.status(200).sendMessage({ msg: 'ok' });
+				await res.status(200).sendData({ msg: 'ok' });
 			} catch(error) {
 				next(error)
 			}
