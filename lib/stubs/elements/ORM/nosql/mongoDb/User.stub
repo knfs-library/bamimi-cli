@@ -1,4 +1,4 @@
-const mongoose = require("@iKernel/database")();
+const mongoose = require("@iKernel/database").get();
 const Schema = mongoose.Schema;
 const auth = require("@iKernel/auth");
 

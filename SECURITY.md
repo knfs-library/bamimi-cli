@@ -6,6 +6,7 @@
 | ------- | ------------------ |
 | 0.5.3   | :white_check_mark: |
 | 0.6.18   | :white_check_mark: |
+| 0.6.19   | :white_check_mark: |
 
 
 ## Reporting a Vulnerability
