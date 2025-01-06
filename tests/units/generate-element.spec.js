@@ -60,7 +60,7 @@ describe('Element Generator', () => {
 	    },
 	};`;
 
-			const [capturedPath, capturedContent] = fs.writeFile.mock.calls[0];
+			const [capturedPath, capturedContent] = fs.outputFile.mock.calls[0];
 
 			expect(capturedPath).toBe(targetPath);
 		});
@@ -86,7 +86,7 @@ describe('Element Generator', () => {
 	    // TestMiddleware implementation
 	};`;
 
-			const [capturedPath, capturedContent] = fs.writeFile.mock.calls[0];
+			const [capturedPath, capturedContent] = fs.outputFile.mock.calls[0];
 
 			expect(capturedPath).toBe(targetPath);
 
@@ -117,7 +117,7 @@ describe('Element Generator', () => {
 	    // TestRequest implementation
 	]`;
 
-			const [capturedPath, capturedContent] = fs.writeFile.mock.calls[0];
+			const [capturedPath, capturedContent] = fs.outputFile.mock.calls[0];
 
 			// Assert the target path is correct
 			expect(capturedPath).toBe(targetPath);
@@ -169,8 +169,8 @@ module.exports = (data) => {
 };
 `;
 
-		// Capture the arguments passed to fs.writeFile
-		const [capturedPath, capturedContent] = fs.writeFile.mock.calls[0];
+		// Capture the arguments passed to fs.outputFile
+		const [capturedPath, capturedContent] = fs.outputFile.mock.calls[0];
 
 		// Assert the target path is correct
 		expect(capturedPath).toBe(targetPath);
@@ -214,7 +214,7 @@ module.exports = {
     }
 };`;
 
-		const [capturedPath, capturedContent] = fs.writeFile.mock.calls[0];
+		const [capturedPath, capturedContent] = fs.outputFile.mock.calls[0];
 
 		expect(capturedPath).toBe(targetPath);
 
