@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/knfs-library/bamimi-cli/issues"
   },
-  "homepage": "https://github.com/knfs-library/bamimi-cli#readme",
+  "homepage": "https://bamimi.github.io",
   "devDependencies": {
     "@babel/core": "^7.24.9",
     "@babel/preset-env": "^7.25.0",
