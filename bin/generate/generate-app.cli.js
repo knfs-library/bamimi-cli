@@ -72,6 +72,7 @@ module.exports = (runCommand) => {
 				let databaseType = databaseTypeParam && ['SQL', 'NoSQL', 'none'].includes(databaseTypeParam) ? databaseTypeParam : await select({
 					message: 'Which type of database would you like to use?',
 					choices: ['SQL', 'NoSQL', 'none'],
+					default: "SQL"
 				});
 
 				let database = {
@@ -79,7 +80,7 @@ module.exports = (runCommand) => {
 				}
 				switch (databaseType) {
 					case "SQL":
-						const listConnectSQL = ['postgres', 'mysql', 'mariadb', 'sqlite', 'mssql', 'snowflake', 'oracle', 'none']
+						const listConnectSQL = ['postgres', 'mysql', 'mariadb', 'sqlite', 'mssql', 'snowflake', 'oracle']
 						database.connection = databaseConnection && listConnectSQL.includes(databaseConnection) ? databaseConnection : await select({
 							message: 'Which connection of database would you like to use?',
 							choices: listConnectSQL,
@@ -97,10 +98,11 @@ module.exports = (runCommand) => {
 
 						break;
 					case 'NoSQL':
-						const listConnectNoSQL = ['mongodb', 'none']
+						const listConnectNoSQL = ['mongodb']
 						database.connection = databaseConnection && listConnectNoSQL.includes(databaseConnection) ? databaseConnection : await select({
 							message: 'Which connection of database would you like to use?',
-							choices: ['mongodb', 'none'],
+							choices: ['mongodb'],
+							default: "mongodb"
 						})
 
 						if ("none" === database.connection) {
@@ -122,6 +124,7 @@ module.exports = (runCommand) => {
 				let packageManager = packageManagerParam && listPackageManager.includes(packageManagerParam) ? packageManagerParam : await select({
 					message: 'Which type of package manager would you like to use?',
 					choices: ['yarn', 'npm', 'pnpm', 'none'],
+					default: "npm"
 				});
 
 
