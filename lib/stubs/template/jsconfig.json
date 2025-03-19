@@ -17,7 +17,7 @@
 				"src/kernel/*"
 			],
 			"@iLibs/*": [
-				"src/libs/*"
+				"../../../../libs/*"
 			],
 			"@iUtils/*": [
 				"src/utils/*"
@@ -38,7 +38,7 @@
 	},
 	"include": [
 		"src/**/*"
-	],
+, "../../../../libs"	],
 	"exclude": [
 		"node_modules",
 		"dist"

@@ -1,3 +1,7 @@
 *.log
 *.md
 *.gitignore
+.env.example
+eslint.config.js
+jest.config.js
+nodemon.json

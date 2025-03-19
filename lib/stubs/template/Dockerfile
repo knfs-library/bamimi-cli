@@ -10,30 +10,38 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /usr/src/app
 
+# Copy package.json and yarn.lock for dependency installation
 COPY --chown=node:node package.json yarn.lock ./
 
 # Install dependencies for building
 RUN yarn install --production=false
 
-COPY --chown=node:node . . 
+# Copy the application code
+COPY --chown=node:node . .
 
+# Set proper permissions for the storage folder
+RUN mkdir -p storage && chmod -R 775 storage && chown -R node:node storage
+
+# Build the application
 RUN yarn build
-
 
 # Stage 2: Development
 FROM node:20-slim as development
 
-# Copy only the dist directory from the builder stage
-COPY --from=builder /usr/src/app/dist /usr/src/app/dist
+# Set working directory
+WORKDIR /usr/src/app
 
+# Copy necessary files from builder stage
+COPY --from=builder /usr/src/app/dist /usr/src/app/dist
 COPY --from=builder /usr/src/app/package.json /usr/src/app/package.json
 COPY --from=builder /usr/src/app/node_modules /usr/src/app/node_modules
 COPY --from=builder /usr/src/app/.env /usr/src/app/.env
+COPY --from=builder /usr/src/app/storage /usr/src/app/storage
+
+# Install all dependencies (including devDependencies)
+RUN yarn install --production=false --ignore-scripts
 
 ENV NODE_ENV=development
-WORKDIR /usr/src/app
-
-RUN yarn install --production=false --ignore-scripts
 
 EXPOSE 3000
 
@@ -43,17 +51,23 @@ CMD ["yarn", "start"]
 # Stage 3: 
 FROM node:20-slim as production
 
-# Copy only the dist directory from the builder stage
-COPY --from=builder /usr/src/app/dist /usr/src/app/dist
-
-COPY --from=builder /usr/src/app/package.json /usr/src/app/package.json
-COPY --from=builder /usr/src/app/.env /usr/src/app/.env
-
-ENV NODE_ENV=production
+# Set working directory
 WORKDIR /usr/src/app
 
+# Copy only necessary files from builder stage
+COPY --from=builder /usr/src/app/dist /usr/src/app/dist
+COPY --from=builder /usr/src/app/package.json /usr/src/app/package.json
+COPY --from=builder /usr/src/app/.env /usr/src/app/.env
+COPY --from=builder /usr/src/app/storage /usr/src/app/storage
+
+# Install production dependencies
 RUN yarn install --production
 
+# Set environment variables
+ENV NODE_ENV=production
+
+# Expose the application port
 EXPOSE 3000
 
+# Run the application
 CMD ["yarn", "start"]

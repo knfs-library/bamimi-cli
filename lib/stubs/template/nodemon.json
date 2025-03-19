@@ -1,5 +1,10 @@
 {
 	"execMap": {
 		"js": "node -r module-alias/register"
-	}
+	},
+	"ignore": [
+		"./storage",
+		"package.json",
+		"jest.config.js"
+	]
 }

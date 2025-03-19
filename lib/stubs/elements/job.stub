@@ -9,6 +9,7 @@
 module.exports = {
     name: "// jobName",
     queue: "// queueName",
+    queueManager: "// queueManager",
     handle: async function (job) {
 		// handle
     }

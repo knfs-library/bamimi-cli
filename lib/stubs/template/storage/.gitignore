@@ -1,0 +1,4 @@
+./sys/logs/*
+./public/*
+./cache/*
+./tmp/*

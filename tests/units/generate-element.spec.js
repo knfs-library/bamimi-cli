@@ -141,7 +141,6 @@ describe('Element Generator', () => {
 				return `
 "use strict";
 
-const { sendMail } = require("../../utils/mail");
 // render
 // queue
 
@@ -161,17 +160,18 @@ module.exports = (data) => {
 
 		const expectedContent = `
 "use strict";
-const { sendMail } = require("../../utils/mail");
+const { sendMail } = require("@iKernel/mail");
 
 module.exports = (data) => {
-    const text = 'Hello word!';
-    sendMail({ to: data.email, subject: "Welcome to Bamimi land", text: text  });
+    const html = 'Hello world!';
+    sendMail({ to: data.email, subject: "Welcome to Bamimi land", html  });
 };
 `;
 
 		// Capture the arguments passed to fs.outputFile
 		const [capturedPath, capturedContent] = fs.outputFile.mock.calls[0];
 
+		console.log(capturedContent, targetPath)
 		// Assert the target path is correct
 		expect(capturedPath).toBe(targetPath);
 
