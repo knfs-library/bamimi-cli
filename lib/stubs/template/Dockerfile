@@ -1,5 +1,5 @@
 # Stage 1: Builder
-FROM node:20 AS builder
+FROM node:22 AS builder
 
 # Install necessary build tools
 RUN apt-get update && apt-get install -y \
@@ -22,11 +22,13 @@ COPY --chown=node:node . .
 # Set proper permissions for the storage folder
 RUN mkdir -p storage && chmod -R 775 storage && chown -R node:node storage
 
+# Install bamimi-cli for build
+RUN yarn add @knfs-tech/bamimi-cli -g
 # Build the application
 RUN yarn build
 
 # Stage 2: Development
-FROM node:20-slim as development
+FROM node:22-slim as development
 
 # Set working directory
 WORKDIR /usr/src/app
@@ -47,9 +49,8 @@ EXPOSE 3000
 
 CMD ["yarn", "start"]
 
-
-# Stage 3: 
-FROM node:20-slim as production
+# Stage 3: Production
+FROM node:22-slim as production
 
 # Set working directory
 WORKDIR /usr/src/app
