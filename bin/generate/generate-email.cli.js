@@ -9,8 +9,8 @@ module.exports = (runCommand) => {
 	runCommand
 		.command('email:generate <emailName>')
 		.description('Generate a new email')
-		.option('-tn, --templateName <templateName>', 'Template name if you want to use email with html')
-		.option('-job, --jobName <jobName>', 'Job name if you want to use email with queue job ')
+		.option('--tn, --templateName <templateName>', 'Template name if you want to use email with html')
+		.option('--job, --jobName <jobName>', 'Job name if you want to use email with queue job ')
 		.action(async (emailName, cmdObj) => {
 			const { templateName: templateName, jobName: jobName } = cmdObj;
 			let fileName = `${emailName}.email.js`;

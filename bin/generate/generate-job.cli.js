@@ -10,7 +10,7 @@ module.exports = (runCommand) => {
 	runCommand
 		.command('job:generate <jobName>')
 		.description('Generate a new job')
-		.option('-isc, --isSchedule <isSchedule>', 'Job is schedule (y/n) ')
+		.option('--isc, --isSchedule <isSchedule>', 'Job is schedule (y/n) ')
 		.action(async (jobName, cmdObj) => {
 			const { isSchedule: isScheduleParam } = cmdObj;
 			let fileName = `${jobName}.job.js`;
