@@ -1,9 +1,9 @@
 {
   "name": "bamimi",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "Power framework for nodejs",
   "main": "src/server.js",
-  "bamimiVersion": "1.0.3",
+  "bamimiVersion": "1.0.9",
   "bin": {
     "bamimi-enjoy-": "./dist/routes/cli/index.js",
     "bamimi-enjoy-dev": "./src/routes/cli/index.js"
